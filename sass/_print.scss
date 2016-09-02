@@ -1,0 +1,25 @@
+@media print {
+  * {
+    float:none !important;
+  }
+  #site-navigation, footer, nav, #navbar-button, .comments-area {
+    display: none;
+  }
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+  .site-title {
+    font-size: 32px;
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: none;
+  }
+  .panel-title > a[href]:after, .panel-body a[href]:after {
+    content:" <" attr(href) "> ";
+  }
+  article {
+    page-break-after: always;
+  }
+}

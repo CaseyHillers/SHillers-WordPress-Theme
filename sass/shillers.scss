@@ -1,0 +1,378 @@
+/*
+ * Color scheme
+ */
+ $navbar-bg: #37474f;
+$brand-primary: #1976d2;
+$accent: $brand-primary;
+$accent-high: #2979ff;
+$accent-alt: #4caf50;
+$accent-alt2: #00e676;
+$background: #eceff1;
+$background-darken: darken($background, 5%);
+$background-darkest: darken($background, 25%);
+/*
+ * Site stylings (general)
+ */
+a,
+a:visited {
+    color: $brand-primary;
+}
+a:active,
+a:focus,
+a:hover {
+    color: $accent-high;
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    background: $background;
+    font-size: 1.5rem;
+}
+/*
+ * Site header
+ */
+.site-title {
+    margin: 10px 0 0;
+    padding: 0 0 5px 5px;
+    display: inline-block;
+}
+a.site-title {
+    text-align: center;
+    margin: 0;
+    padding: 5px 0 5px 5px;
+    font-size: 20px;
+    color: $white;
+}
+a.site-title:hover {
+    text-decoration: underline;
+}
+.site-description {
+    text-align: center;
+    margin: 0;
+}
+/*
+ * Navbar styling
+ */
+.page-item {
+    width: 100%;
+}
+.navbar {
+    margin-bottom: 0;
+    background: $navbar-bg;
+    box-shadow: 0 2px 1px $background-darkest;
+}
+.navbar-collapse {
+    padding: 0;
+}
+.navbar-header {
+    margin: 0;
+}
+.nav {
+    padding: 0;
+}
+.menu > ul {
+    margin: 0;
+    padding: 0 0 20px 10px;
+}
+@media screen and (min-width: 768px) {
+    .menu > ul {
+        padding-top: 25px;
+    }
+}
+.menu * {
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 20px;
+}
+.menu > ul > li {
+    color: $background-darkest;
+    font-size: 1.5rem;
+}
+.menu > ul > li > a {
+    color: $background-darkest;
+}
+.menu > ul *:hover {
+    background: $background-darken;
+    cursor: pointer;
+}
+.menu > ul > li > ul {
+    padding: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 2000ms ease;
+    -webkit-transition: max-height 2000ms ease;
+    -moz-transition: max-height 2000ms ease;
+    -o-transition: max-height 2000ms ease;
+}
+.menu > ul > li:hover > ul {
+    padding: 10px 10px 10px 20px;
+    max-height: 1000px;
+}
+.menu li {
+    padding-left: 0;
+    font-size: 1.5rem;
+}
+.menu > ul > li > ul > li > a,
+.menu > ul > li > ul > li > ul > li > a {
+    font-size: 1.5rem;
+}
+.navbar-toggle {
+    color: $white;
+    float: left;
+    box-shadow: none;
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 0;
+}
+.navbar-toggle:focus, .navbar-toggle:active {
+  box-shadow: none;
+}
+@media screen and (max-width: 768px) {
+    .site-content {
+        margin-top: 5px;
+    }
+}
+.navbar-toggle:hover {
+    box-shadow: none;
+}
+/*
+ * Content styling
+ */
+.site-content {
+    padding: 0 5px;
+}
+@media screen and (min-width: 768px) {
+    .site-content {
+        margin-top: -25px;
+    }
+}
+.panel {
+    padding: 10px;
+    margin-bottom: 20px;
+    overflow: auto;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+.panel-head {
+    padding: 10px 10px 5px;
+}
+.panel-title,
+.panel-title > a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    padding: 0;
+    margin-bottom: 3px;
+    color: $accent;
+}
+.panel-title > a:active,
+.panel-title > a:focus,
+.panel-title > a:hover {
+    color: $accent-high;
+}
+.panel-footer {
+    padding-top: 5px;
+    padding-bottom: 0;
+    background: $white;
+}
+.tags-links {
+    float: right;
+}
+.nav-next a,
+.nav-previous a {
+    @extend .btn;
+    @extend .btn-primary;
+    font-size: 1.5rem;
+}
+.sticky a {
+    color: $accent-alt;
+}
+.sticky > header > h2 > a:active,
+.sticky > header > h2 > a:focus,
+.sticky > header > h2 > a:hover,
+.sticky a:active,
+.sticky a:focus,
+.sticky a:hover {
+    color: $accent-alt2;
+}
+a.more-link {
+    @extend .btn;
+    @extend .btn-primary;
+    color: $accent;
+}
+.wp-caption-text {
+  color: $background-darkest;
+  font-style: italic;
+}
+blockquote, q {
+  color: $background-darkest;
+  font-style: italic;
+}
+.comments-link {
+  display: block;
+  font-weight: bold;
+}
+.panel-head {
+  color: $background-darkest;
+}
+.posted-on, .byline {
+  font-style: italic;
+}
+table {
+  @extend .table;
+}
+code {
+  background: $navbar-bg;
+  color: $white;
+}
+ins {
+  background: rgba($brand-primary, 0.3);
+}
+pre {
+  background: $navbar-bg;
+  color: $white;
+  font-size: 12px;
+}
+var {
+  font-size: 14px;
+}
+/*
+ * Comment styling
+ */
+.comment-list * {
+    list-style-type: none;
+    margin-left: 0;
+    overflow: hidden;
+}
+.comment-reply-title,
+.comments-title {
+    padding: 10px;
+    font-size: 2.25rem;
+    @extend .panel-title;
+}
+.comment-list .list-group-item {
+    padding-top: 5px;
+}
+.comment-list > li > ol, .comment-list > li > ol > li > ol > li > ol {
+  background: $background;
+  padding-right: 0;
+  box-shadow: 0;
+}
+.comment-list > li > ol > li > ol, .comment-list > li > ol > li > ol > li > ol > li > ol {
+  background: $white;
+  padding-right: 0;
+  box-shadow: 0;
+}
+
+.comment-intro {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.comment-time {
+  color: $background-darkest;
+  padding-left: 5px;
+  font-size: 12px;
+}
+.no-comments {
+    margin-top: 20px;
+    text-align: center;
+    color: $background-darkest;
+}
+.row-picture {
+    vertical-align: top;
+    padding-top: 25px;
+}
+.row-content {
+  font-size: 14px;
+}
+.form-group {
+  margin: 0;
+  padding: 0;
+}
+.comment-list {
+  margin-left: 0;
+}
+/*
+ * Sidebar styling
+ */
+.widget > ul {
+    margin: 0;
+    padding-left: 20px;
+}
+.widget_search {}
+.search-form {
+    @extend .form-control;
+    @extend .form-group;
+    @extend .label-floating;
+    margin-top: 5px;
+}
+.search-field {
+    @extend .form-control;
+    background-color: $white !important;
+}
+.search-submit {
+    display: none;
+    border-color: $background;
+}
+.commentform-title {
+  margin-top: 25px;
+  padding-left: 10px;
+}
+.comment-notes {
+  padding-left: 10px;
+  margin-bottom: 0;
+  font-style: italic;
+  color: $background-darkest;
+}
+input.btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+}
+.comment-respond {
+  padding-top: 20px;
+}
+input.btn:hover, input.btn:active, input.btn:focus {
+  background: $background;
+  box-shadow: none;
+}
+.page-header {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+fieldset {
+  border: none;
+}
+/*
+ * Footer styling
+ */
+.site-footer {
+  text-align: center;
+  color: $background-darkest;
+  font-size: 32px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+.site-footer a {
+  color: $background-darkest;
+}
+@media screen and (min-width: 992px) {
+  .site-footer a {
+    width: 100%;
+  }
+}
+#facebook:hover, #facebook:active, #facebook:focus {
+  color: #3b5998;
+}
+#twitter:hover, #twitter:active, #twitter:focus {
+  color: #1DA1F2;
+}
+#medium:hover, #medium:active, #medium:focus {
+  color: #00AB6C;
+}
+#instagram:hover, #instagram:active, #instagram:focus {
+  color: #D92E7F;
+}
+#linkedin:hover, #linkedin:active, #linkedin:focus {
+  color: #0077B5;
+}

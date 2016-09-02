@@ -1,0 +1,28 @@
+{
+  "name": "ShaneHillers",
+  "authors": [
+    "Casey <caseyhillers@gmail.com>"
+  ],
+  "description": "Shane Hiller's personal wordpress theme",
+  "main": "style.css",
+  "keywords": [
+    "shane",
+    "hillers",
+    "writing",
+    "blog",
+    "wordpress",
+    "theme",
+    "material",
+    "design"
+  ],
+  "license": "GPL",
+  "homepage": "shanehillers.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
